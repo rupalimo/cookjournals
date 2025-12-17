@@ -82,6 +82,10 @@ section {
 	flex-direction: column-reverse;
 }
 
+img {
+  display: 100%;
+}
+
 @media (max-width: 640px) {
 	body {
 		width: calc(100% - 2rem);
