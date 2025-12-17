@@ -5,7 +5,7 @@
 	--text-color: #000000;
 	--purple: rgb(179, 0, 255);
 	--grey: #909090cc;
-	--red: red;
+	--red: rgb(255, 140, 0);
 	color: var(--text-color);
 	font-size: 16px;
 	font-family: var(--font1);
@@ -22,18 +22,27 @@ body {
 	padding: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 1rem;
+}
+
+header h5[data-filter-type="undefined"] {
+  display: none;
+}
+
 .add-button {
 	text-decoration: none;
 	color: var(--red);
-	border: 1px solid var(--red);
-	position: fixed;
-	left: calc(600px + 3rem);
-	bottom: 1rem;
-	padding: 2rem;
+	font-weight: bold;
+	padding: 1rem;
 }
 
-.add-button:hover {
-	box-shadow: 0 0 12px 0 var(--red) inset;
+.add-button::before {
+  content: "...";
+  margin-right: 0;
 }
 
 .blog--item {
@@ -66,4 +75,21 @@ body {
 
 .blog--item span p:not(p:first-of-type) {
   border-left: 1px solid var(--grey);
+}
+
+@media (max-width: 640px) {
+  body {
+	width: calc(100% - 2rem);
+	margin: 1rem;
+	padding: 0;
+}
+
+.add-button {
+  top: 1rem;
+  right: 1rem;
+  left: revert;
+    bottom: revert;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.75rem 2rem;
+}
 }

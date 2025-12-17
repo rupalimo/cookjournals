@@ -11,7 +11,14 @@ $(document).ready(function () {
         console.log(entry);
 
         if (index == 0) return;
-        let header = $(`<h1>` + entry.BlogName + `</h1>`).appendTo('#blog-title');
+        let header = $(
+					`<h5 data-filter-type="` +
+						entry.BlogName +
+						`">` +
+						entry.BlogName +
+						`</h5da
+				ta-filter-type=>`
+				).appendTo('#blog-title');
 
         let section = $(
 					`<article data-filter-type="` +
