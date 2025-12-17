@@ -86,6 +86,10 @@ img {
   width: 100%;
 }
 
+img[src="imgs/"] {
+	display: none;
+}
+
 @media (max-width: 640px) {
 	body {
 		width: calc(100% - 2rem);
