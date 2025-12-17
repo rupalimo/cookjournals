@@ -83,7 +83,7 @@ section {
 }
 
 img {
-  display: 100%;
+  width: 100%;
 }
 
 @media (max-width: 640px) {
